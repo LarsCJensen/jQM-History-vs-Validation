@@ -4,8 +4,8 @@
             var fromPage = data.options.fromPage.attr('id');
             var toPage = data.toPage;
             if (pageConditionsMet(fromPage, toPage)) {
-                e.preventDefault();
                 if ($("#text1").val() == "" || $("#date1").val() == "") {
+                    e.preventDefault();
                     $("#dialog").jqmData("pageToChangeTo", fromPage);
                     $("#dialogLabel").text("You must fill both the boxes before you can move back!");
                     $("#lnkDialog").click();
