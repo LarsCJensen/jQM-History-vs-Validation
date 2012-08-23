@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery Mobile History Test</title>
+    <link href="CSS/jquery.mobile-latest.css" rel="stylesheet" type="text/css" />            
+    <link href="CSS/style.css" rel="stylesheet" type="text/css" />
+    <script src="Lib/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="Scripts/scripts.js" type="text/javascript"></script>
+    <script src="Lib/jquery.mobile-latest.js" type="text/javascript"></script>
+</head>
+<body>
+    <a id='lnkDialog' href="#dialog" data-rel="dialog" data-transition="pop" style='display:none;'></a>
+    <div id="startpage" data-role="page" data-add-back-btn="false">
+        <div data-role="header" data-position="fixed">
+            <h1>Startpage</h1>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview">
+                <li id="page1Link"><a href="#page1" data-transition="slide">Page1</a></li>
+            </ul>    
+        
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">&nbsp;</div>            
+        </div>
+    </div>
+    
+    <div id="page1" data-role="page" data-add-back-btn="false">
+        <div data-role="header" data-position="fixed">
+            <a data-icon="arrow-l" data-rel="back">Back</a>
+            <h1>Page1</h1>
+            <a href="#startpage" data-icon="home">Start</a>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview">
+                <li id="page2Link"><a href="#page2" data-transition="slide">Page2</a></li>
+            </ul>    
+        
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">&nbsp;</div>            
+        </div>
+    </div>
+    
+    <div id="page2" data-role="page" data-add-back-btn="false">
+        <div data-role="header" data-position="fixed">
+            <a data-icon="arrow-l" data-rel="back">Back</a>
+            <h1>Page2</h1>
+            <a href="#startpage" data-icon="home">Start</a>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview">
+                <li id="Li1"><a href="#page3" data-transition="slide">Page3</a></li>
+            </ul>    
+        
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">&nbsp;</div>            
+        </div>
+    </div>
+    
+    <div id="page3" data-role="page" data-add-back-btn="false">
+        <div data-role="header" data-position="fixed">
+            <a data-icon="arrow-l" data-rel="back">Back</a>
+            <h1>Page3</h1>
+            <a href="#startpage" data-icon="home">Start</a>
+        </div>
+        <div data-role="content">
+            <div>
+                <label>When you move back, validation is triggered and if the text1 and date1 isn't both filled a validation message is shown</label>
+            </div>
+            <div>
+                <label for="text1">Write text</label>
+                <input type="text" id="text1"/>
+            </div>
+            <div>
+                <label for="date1">Add date</label>
+                <input type="date" id="date1" />
+            </div>	
+            <div>
+                <input type="button" id="cancel" value="Cancel"/>
+            </div>
+        
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">&nbsp;</div>            
+        </div>
+    </div>
+    
+    <div id="dialog" data-role="dialog">
+        <div data-role="header" data-position="fixed">
+            <h1>Validation error!</h1>
+        </div>
+
+        <div data-role="content">        
+            <div>
+                <label id="dialogLabel"></label>
+            </div>    	
+            <div>
+                <input type="button" id="dialogOkClose" value="Ok Close"/>
+                <input type="button" id="dialogOkChangePage" value="Ok ChangePage"/>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
